@@ -1,7 +1,7 @@
 // frontend/src/components/Navbar.jsx
 
 import React, { useState } from "react";
-import whatsappIcon from "../assets/img/whatsapp.svg"; // Pastikan path ini benar
+import whatsappIcon from "../assets/whatsapp.svg"; // Pastikan path ini benar
 
 // Ikon menu hamburger
 const MenuIcon = () => (
