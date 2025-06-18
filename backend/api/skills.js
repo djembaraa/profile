@@ -1,11 +1,10 @@
 import express from "express";
-import supaBase from "../supabaseclient.js";
-
+import supabase from "../supabaseclient.js"; // INI BENAR (semua huruf kecil, sesuai nama file)
 const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    const { data, error } = await supaBase.from("skills").select("*");
+    const { data, error } = await supabase.from("skills").select("*");
     if (error) {
       throw error;
     }

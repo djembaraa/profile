@@ -1,7 +1,6 @@
 // backend/api/certificates.js
 import express from "express";
-import supabase from "../supabaseclient.js";
-
+import supabase from "../supabaseclient.js"; // INI BENAR (semua huruf kecil, sesuai nama file)
 const router = express.Router();
 
 router.get("/", async (req, res) => {
