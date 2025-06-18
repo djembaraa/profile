@@ -9,7 +9,7 @@
 
 Sebuah website portofolio full-stack yang dibangun dari nol untuk menampilkan keahlian, pengalaman kerja, proyek, dan sertifikasi saya dalam pengembangan web dan bidang kreatif lainnya.
 
-[🚀 **Lihat Live Demo**](https://URL_VERCEL_ANDA.vercel.app)
+[🚀 **Lihat Live Demo**]([https://URL_VERCEL_ANDA.vercel.app](https://djembaraa-djembaraas-projects.vercel.app/))
 _(Jangan lupa ganti `URL_VERCEL_ANDA.vercel.app` dengan link Vercel Anda yang sebenarnya setelah deployment berhasil)_
 
 ---
@@ -42,53 +42,6 @@ _(Catatan: Pastikan Anda memiliki folder `screenshot` di root proyek dan di dala
   - PostgreSQL (dikelola oleh Supabase)
 - **Deployment:**
   - Vercel
-
-### ⚙️ Instalasi & Setup Lokal
-
-Untuk menjalankan proyek ini di komputer lokal Anda:
-
-1.  **Clone repository ini:**
-
-    ```bash
-    git clone [https://github.com/djembaraa/profile.git](https://github.com/djembaraa/profile.git)
-    cd profile
-    ```
-
-2.  **Setup Backend:**
-
-    ```bash
-    cd backend
-    npm install
-    ```
-
-3.  **Setup Frontend:**
-
-    ```bash
-    cd ../frontend
-    npm install
-    ```
-
-4.  **Konfigurasi Environment Variables:**
-
-    - Buat file `.env` di dalam folder `backend`.
-    - Tambahkan variabel berikut sesuai dengan akun Supabase Anda:
-      ```
-      SUPABASE_URL=URL_PROYEK_SUPABASE_ANDA
-      SUPABASE_SERVICE_KEY=KUNCI_SERVICE_ROLE_ANDA
-      ```
-
-5.  **Menjalankan Proyek:**
-    - Anda membutuhkan **dua terminal** yang berjalan bersamaan.
-    - **Terminal 1 (dari folder root, `profile`):** Jalankan server backend.
-      ```bash
-      npm start
-      ```
-    - **Terminal 2 (dari folder `frontend`):** Jalankan server frontend.
-      ```bash
-      cd frontend
-      npm run dev
-      ```
-    - Buka `http://localhost:5173` (atau port lain yang ditampilkan) di browser Anda.
 
 ### 📁 Struktur Proyek
 
