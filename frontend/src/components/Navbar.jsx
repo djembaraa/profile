@@ -1,10 +1,9 @@
 // frontend/src/components/Navbar.jsx
 
-import React, { useState } from "react"; // Hapus useEffect karena tidak dipakai lagi
-import whatsappIcon from "../assets/whatsapp.svg"; // Pastikan path dan nama file gambar ini benar
+import React, { useState } from "react";
+import whatsappIcon from "../assets/img/whatsapp.png"; // Pastikan path ini benar
 
-// Hapus komponen SunIcon dan MoonIcon karena tidak dipakai
-
+// Ikon menu hamburger
 const MenuIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,102 +22,131 @@ const MenuIcon = () => (
 );
 
 const Navbar = () => {
-  // State yang tersisa hanya untuk menu mobile
+  // State hanya untuk mengontrol buka/tutup menu mobile
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Hapus semua state dan useEffect untuk dark mode dari sini
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    // Kita hapus semua kelas 'dark:...' untuk sementara
     <header className="bg-gray-900 shadow-lg sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#" id="About" className="text-2xl font-bold text-white">
+        <a href="#hero" className="text-2xl font-bold text-white">
           DJ
         </a>
 
         {/* Grup item menu untuk desktop */}
         <div className="hidden md:flex items-center space-x-6">
-          <a
-            href="#skills"
-            className="nav-link text-gray-100 hover:text-gray-400"
-          >
+          <a href="#skills" className="nav-link text-gray-300 hover:text-white">
             Skills
           </a>
           <a
             href="#experience"
-            className="nav-link text-gray-100 hover:text-gray-400"
+            className="nav-link text-gray-300 hover:text-white"
           >
             Experience
           </a>
           <a
             href="#projects"
-            className="nav-link text-gray-100 hover:text-gray-400"
+            className="nav-link text-gray-300 hover:text-white"
           >
             Projects
           </a>
           <a
             href="#certificates"
-            className="nav-link text-gray-100 hover:text-gray-400"
+            className="nav-link text-gray-300 hover:text-white"
           >
             Certificates
           </a>
-          <a
-            href="https://github.com/djembaraa"
-            className="bg-gray-700 hover:brightness-95 text-white px-5 py-2 rounded-lg transition-colors flex items-center justify-center font-medium text-sm"
-          >
-            Github
-          </a>
-          <a
-            href="https://www.linkedin.com/in/djembar-arafat-9a6602178/"
-            className="bg-[#0e76a8] hover:brightness-95 text-white px-5 py-2 rounded-lg transition-colors flex items-center justify-center font-medium text-sm"
-          >
-            Linkedin
-          </a>
 
-          {/* Tombol "Let's Talk" dipindahkan ke sini agar rapi */}
-          <a
-            href="https://wa.me/6281282160934" // <-- GANTI DENGAN LINK WA ANDA LANGSUNG
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg transition-colors flex items-center justify-center font-medium text-sm"
-          >
-            <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 mr-2" />
-            Let's Talk
-          </a>
+          <div className="pl-4 flex items-center gap-4">
+            <a
+              href="https://github.com/djembaraa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-transform hover:scale-110"
+            >
+              {/* SVG untuk GitHub bisa ditambahkan di sini jika mau */}
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/djembar-arafat-9a6602178/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-transform hover:scale-110"
+            >
+              Linkedin
+            </a>
+            <a
+              href="https://wa.me/6281282160934"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors flex items-center font-medium text-sm"
+            >
+              <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 mr-2" />
+              Let's Talk
+            </a>
+          </div>
         </div>
 
-        {/* Tombol menu mobile tetap di sini */}
-        <button onClick={toggleMobileMenu} className="md:hidden text-gray-700">
+        {/* Tombol menu mobile, hanya muncul di layar kecil */}
+        <button onClick={toggleMobileMenu} className="md:hidden text-white">
           <MenuIcon />
         </button>
       </nav>
 
-      {/* Menu mobile */}
+      {/* Kontainer untuk menu mobile dropdown */}
       <div
-        className={`mobile-menu md:hidden bg-white shadow-lg absolute w-full left-0 transition-all duration-300 ease-out ${
+        className={`mobile-menu md:hidden bg-gray-900 shadow-lg absolute w-full left-0 transition-all duration-300 ease-out ${
           isMobileMenuOpen
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-full opacity-0"
+            ? "translate-y-0 opacity-100 visible"
+            : "-translate-y-full opacity-0 invisible"
         }`}
       >
-        <div className="container mx-auto px-4 py-4 space-y-4">
-          <a href="#skills" className="block text-gray-700">
+        <div className="container mx-auto px-6 py-4 flex flex-col items-center text-center space-y-4">
+          <a
+            href="#skills"
+            onClick={toggleMobileMenu}
+            className="block text-gray-300 hover:text-white w-full py-2"
+          >
             Skills
           </a>
-          <a href="#experience" className="block text-gray-700">
+          <a
+            href="#experience"
+            onClick={toggleMobileMenu}
+            className="block text-gray-300 hover:text-white w-full py-2"
+          >
             Experience
           </a>
-          <a href="#projects" className="block text-gray-700">
+          <a
+            href="#projects"
+            onClick={toggleMobileMenu}
+            className="block text-gray-300 hover:text-white w-full py-2"
+          >
             Projects
           </a>
-          <a href="#certificates" className="block text-gray-700">
+          <a
+            href="#certificates"
+            onClick={toggleMobileMenu}
+            className="block text-gray-300 hover:text-white w-full py-2"
+          >
             Certificates
           </a>
-          {/* Anda juga bisa menambahkan tombol Let's Talk di sini jika mau */}
+          <div className="flex items-center gap-6 pt-4">
+            <a
+              href="https://github.com/djembaraa"
+              className="text-gray-300 hover:text-white"
+            >
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/djembar-arafat-9a6602178/"
+              className="text-gray-300 hover:text-white"
+            >
+              Linkedin
+            </a>
+          </div>
         </div>
       </div>
     </header>
