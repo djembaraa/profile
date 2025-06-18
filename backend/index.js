@@ -20,6 +20,9 @@ app.use("/api/skills", skillsRouter);
 app.use("/api/projects", projectsRouter);
 app.use("/api/experience", experienceRouter);
 app.use("/api/certificates", certificatesRouter);
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`);
+// });
+
+// Tambahkan baris ini di paling bawah
+export default app;
