@@ -12,7 +12,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/skills");
+        const response = await axios.get("/api/skills");
         // KUNCI UTAMA ADA DI SINI: gandakan datanya
         // Kita gabungkan data asli dengan data itu sendiri sekali lagi
         setSkills([...response.data, ...response.data]);

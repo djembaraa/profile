@@ -55,7 +55,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/projects");
+        const response = await axios.get("/api/projects");
         setAllProjects(response.data);
         setFilteredProjects(response.data);
         const uniqueCategories = [

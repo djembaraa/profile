@@ -22,9 +22,7 @@ const Experience = () => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:3000/api/experience"
-        );
+        const response = await axios.get("/api/experience");
         setAllExperiences(response.data);
       } catch (error) {
         console.error("Gagal mengambil data experience:", error);

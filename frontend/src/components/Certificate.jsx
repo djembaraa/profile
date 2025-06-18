@@ -66,9 +66,7 @@ const Certificate = () => {
   useEffect(() => {
     const fetchCertificates = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:3000/api/certificates"
-        );
+        const response = await axios.get("/api/certificates");
         setAllCertificates(response.data);
       } catch (error) {
         console.error("Gagal mengambil data sertifikat:", error);
