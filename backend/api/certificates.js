@@ -1,6 +1,6 @@
 // backend/api/certificates.js
 import express from "express";
-import supabase from "../supabaseClient.js";
+import supabase from "../supabaseclient.js";
 
 const router = express.Router();
 
