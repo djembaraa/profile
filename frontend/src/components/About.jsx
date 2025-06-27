@@ -51,7 +51,7 @@ const About = () => {
     location: "Depok, Sawangan, Indonesia",
     whatsappLink: "https://wa.me/6281282160934",
     cvLink:
-      "https://drive.google.com/file/d/1iVWDPXKfOgAgtkRoLlE2k1NsBlscecJw/view?usp=sharing",
+      "https://drive.google.com/file/d/1M6SIaTglzVE7nYm8bvUYPPqF88Rbi2lK/view?usp=sharing",
   };
 
   return (
@@ -77,16 +77,18 @@ const About = () => {
               Full-Stack Developer & Cybersecurity Enthusiast
             </p>
             <p className="text-base lg:text-lg text-gray-500 dark:text-gray-300 leading-relaxed">
-              I’m passionate about building reliable web applications from front
-              to back, and constantly exploring how to make software more secure
-              and efficient. With a background in backend development using
-              Golang and frontend skills in JavaScript, I enjoy turning ideas
-              into scalable digital products. Beyond development, I also have a
-              solid understanding of SEO, digital marketing, graphic design,
-              video editing, photography, and videography—allowing me to bridge
-              the gap between technical execution and creative strategy. I’m
-              also interested in data, machine learning, and how technology can
-              create real-world impact.
+              I'm passionate about building reliable and scalable web
+              applications from front to back, using the PERN Stack (PostgreSQL,
+              Express.js, React, Node.js) and modern frameworks like Next.js. I
+              enjoy exploring how to make software more efficient, secure, and
+              user-friendly. With strong experience in both frontend and backend
+              development, I focus on turning ideas into impactful digital
+              products. Beyond coding, I also have a solid background in SEO,
+              digital marketing, graphic design, video editing, photography, and
+              videography—allowing me to bridge the gap between technical
+              execution and creative strategy. I'm also deeply interested in
+              data, machine learning, and how technology can solve real-world
+              problems.
             </p>
           </div>
 
